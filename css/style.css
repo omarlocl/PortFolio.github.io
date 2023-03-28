@@ -39,7 +39,7 @@ header h1 {
 header nav ul {
     display: flex;
     align-items: center;
-    justify-content:last center; 
+    justify-content: center; 
     list-style: none;
 } 
 
@@ -68,13 +68,14 @@ header .nav-bar {
     font-size: 24px;
     cursor: pointer;
     transition: .5s;
+    z-index: 1005px;
 }
 
 header .nav-bar:hover {
     color: #4c4c4c;
 }
 
-header nav ul li span.seleccionado {
+header nav ul li span.active {
     display: block;
     background-color: #5dc1a0;
     height: 2px;
@@ -92,60 +93,9 @@ body, html {
     display: none;
 }
 
-@media screen and (max-width: 900px){
-    .container_navegation {
-        width: 100%;
-        min-width: 200px;
-        max-width: none;
-        position: fixed;
-        right: 0;
-        top: 0;
-        filter: blur(10px);
-
-        transform: translateX(-100%);
-        transition: .3s linear;
-    }
-    .nav-bar {
-        transform: translateX(0%);
-    }
-    #nav{
-        width: 50%;
-        backdrop-filter: blur(22px);
-    }
-    #links{
-        width: 50%;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: auto;
-    }
-    #links li {
-        margin: 25px 0;
-    }
-    #links li a {
-        color: #595959;
-        font-weight: 900px;
-        font-size: 17px;
-    }
-    header.sticky {
-        padding: 5px 100px;
-        background-color: #fbfbfb;
-        box-shadow: none;
-    }
-
-    .nav-bar {
-        display: block;
-    }
-    
-    
-   
-}
-
-
 #inicio {
     width: 100%;
-    max-width: 1480px;
-    overflow: hidden;
+    max-width: 1500px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -796,4 +746,38 @@ footer .contactame ul li i {
 
 #contactanos .foot span {
     color: #575656;
+}
+
+@media screen and (max-width: 980px){
+    #navbar {
+        display: block;
+    }
+   
+    
+
+    #nav #links {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header #nav {
+        display: none;
+    }
+
+    header #nav.active {
+
+        position: absolute;
+        top: 50px;
+        right: 0;
+        backdrop-filter: blur(15px);
+        width: 200px;
+        height: 100vh;
+        display: block !important;
+    }
+
+    header a#nav.active ul{
+        display: block !important;
+    }
 }

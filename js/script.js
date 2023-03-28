@@ -1,19 +1,3 @@
-const btn_hamburguer = document.querySelector("#nav-bar");
-const header = document.querySelector("#header");
-const nav = document.querySelector("#nav");
-const body = document.body;
-
-let letActual = 0;
-let status_button = true;
-
-btn_hamburguer.addEventListener("click", function() {
-    nav.classList.toggle("active");
-    "if(status_button){
-        body.setAttribute("style", "overflow:hidden;");
-    }abelse {
-        body.removeAttribute("style", "overflow:hidden;");
-    }
-il});
 
 function efectoHabilidades(){
     var skills = document.getElementById("#skills");
