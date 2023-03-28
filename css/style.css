@@ -1,0 +1,799 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Great+Vibes&family=Kaushan+Script&family=Maven+Pro:wght@500&family=Space+Grotesk:wght@500&family=Tilt+Prism&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background-color: #fefdfd;
+    box-shadow: -11px 11px 22px #bebebe66, 11px -11px 22px #ffffff5f;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    padding: 20px 50px; 
+    transition: .5s;
+}
+
+header h1 {
+    font-family: 'Courgette';
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    width: 65%;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content:last center; 
+    list-style: none;
+} 
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li .linea {
+    display: block;
+    background-color: #5dc1a0;
+    height: 2px;
+    width: 0%;
+    transition: .5s;
+} 
+
+header nav ul li:hover .linea {
+    width: 100%;
+} 
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header .nav-bar {
+    font-size: 24px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+header .nav-bar:hover {
+    color: #4c4c4c;
+}
+
+header nav ul li span.seleccionado {
+    display: block;
+    background-color: #5dc1a0;
+    height: 2px;
+    width: 100%; 
+}
+
+body, html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    .container_navegation {
+        width: 100%;
+        min-width: 200px;
+        max-width: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        filter: blur(10px);
+
+        transform: translateX(-100%);
+        transition: .3s linear;
+    }
+    .nav-bar {
+        transform: translateX(0%);
+    }
+    #nav{
+        width: 50%;
+        backdrop-filter: blur(22px);
+    }
+    #links{
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+    }
+    #links li {
+        margin: 25px 0;
+    }
+    #links li a {
+        color: #595959;
+        font-weight: 900px;
+        font-size: 17px;
+    }
+    header.sticky {
+        padding: 5px 100px;
+        background-color: #fbfbfb;
+        box-shadow: none;
+    }
+
+    .nav-bar {
+        display: block;
+    }
+    
+    
+   
+}
+
+
+#inicio {
+    width: 100%;
+    max-width: 1480px;
+    overflow: hidden;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapp {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.img {
+    position: absolute;
+    left: 900px;
+    background-image: url('../img/omarblood.png');
+    background-size: cover;
+    background-position: center center;
+    height: 525px;
+    width: 545px;
+    box-shadow: 0 20px 5px 5px rgba(55, 55, 55, 0.374);
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+    z-index: 100; 
+}
+
+@keyframes animate {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+
+
+/*SECCION INICIO*/
+#inicio {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+#inicio .contenido {
+    position: absolute;
+    left: 10px;
+ }
+
+#inicio .contenido .info {
+    width: 750px;
+    left: 10px;
+    padding-top: 1200px;
+    padding-right: 0px;
+    min-width: 500px;
+    justify-content: end;
+    text-align: wrap;
+    font-size: 25px;
+    transform: translateY(-60%);
+    z-index: 10;
+    animation: aparecer 2s forwards;
+}
+
+@keyframes aparecer {
+    0% {
+        margin-left: -50px;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+#inicio .redes {
+    display: inline-block; 
+    margin-top: 20px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+#inicio .redes a {
+    width: 50px;
+    height: 50px;
+    color: #ffff;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #090909;
+    transition: .3s ease-in-out;
+}
+
+#inicio .redes a i {
+    padding-top: 10px;
+}
+
+#inicio .redes .facebook:hover {
+    background: #052ffffe; 
+    border: 2px solid #000;
+}
+#inicio .redes .twitter:hover {
+    background: #02bafd;
+    border: 2px solid #000;
+}
+#inicio .redes .instagram:hover {
+    background: linear-gradient(#fc0101, #fe026b);
+    border: 2px solid #000;
+}
+#inicio .redes .tiktok:hover {
+    background: #fbfcfc;
+    color: #000;
+    border: 2px solid #000;
+}
+
+#inicio .wrapper {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: 0 10%;
+    justify-content: space-between;
+ }
+
+ .wrapper::before {
+    position: absolute;
+    content: "";
+    width: 879px;
+    height: 800px;
+    border-radius: 50%;
+    left: -12%;
+    top: 20%;
+    background: linear-gradient(45deg, #9c9b9b, #07fdab);
+    animation: object 6s linear infinite;
+ }
+
+ .wrapper::after {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg, #5900ff, #c0ffe8);
+    animation: object1 6s linear infinite;
+ }
+
+ @keyframes object {
+    50% {
+        left: -13%;
+        top: 41%;
+    }
+ }
+ @keyframes object1 {
+    50% {
+        left: 45%;
+        top: 10%;
+    }
+ }
+
+ #inicio .wrapper .info h3 {
+    font-family: 'Poppins';
+    font-size: 68px;
+    font-weight: bolder;
+    box-shadow: 0px 3px 5px #000;
+    margin-bottom: 25px;
+ }
+
+/*Sobre MI*/
+
+#sobremi {
+    width: 100%;
+    height: 800px;
+    left: 100px;
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center; 
+
+}
+
+#sobremi .contenido {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    justify-content: space-between; 
+}
+
+
+.contenedor-img {
+    display: flex;
+    align-items: center;
+    justify-content:center
+}
+
+#sobremi .contenido .left .contenedor-img img {
+    width: 35%;
+}
+
+#sobremi .contenido button a {
+    text-decoration: none;
+    color: #000; 
+}
+
+#sobremi .contenido .left, .right {
+    width: 50%;
+}
+
+.about {
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about h1 {
+    font-size: 35px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.right .about button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #0a0a0a;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #090909;
+    position: relative;
+    z-index: 10; 
+}
+
+.right .about button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #08d14b;
+    z-index: -1;
+    transition: 1s;
+}
+
+.right .about button:hover .overlay {
+    width: 100%;
+}
+
+
+/*seccion portafolio*/
+
+#portafolio {
+    width: 100%;
+    height: 800px;
+    background-color: #f9f9f9;
+ }
+
+ #portafolio .contenido {
+    padding: 150px 30px;
+    width: 100%;
+    max-width: 1200px;
+    height: 800px;
+    margin: auto;
+ } 
+
+ #portafolio .contenido .left span {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 15px;
+ }
+
+ #portafolio .contenido .encabezado-portafolio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ #portafolio .contenido .encabezado-portafolio a {
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+    padding: 5px 15px;
+
+ }
+
+ .activada {
+    background-color: #000;
+    color: #fff !important;
+ } 
+
+ #portafolio .contenido .left h3 {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 15px;
+ } 
+
+ #portafolio .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-gap: 30px;
+ } 
+
+ #portafolio .galeria img {
+    width: 100%;
+    transition: .5s;
+ }
+
+ #portafolio .galeria .proyecto {
+    position: relative;
+    overflow: hidden;
+ }
+
+ #portafolio .galeria h3 {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(0 0 0 / 50%);
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+ }    
+
+ #portafolio .galeria .proyecto:hover h3 {
+    opacity: 1;
+ } 
+
+ #portafolio .galeria .proyecto:hover img {
+    transform: scale(1.1);
+ }
+
+ /*SKILLSS*/
+ #skills {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ #skills .contenido {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ #skills h1 {
+    font-size: 55px;
+    padding-bottom: 40px;
+ }
+
+ #skills h2 {
+    font-size: 45px;
+ }
+
+ #skills .contenido .left {
+    width: 60%;
+    margin-left: 10px;
+ }
+
+ #skills .contenido .right {
+    width: 40%;
+ }
+
+
+#skills .skill > span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#skills .skill .barra-skill {
+    height: 4px;
+    width: 80%;
+    background-color: transparent;
+    box-shadow: 3.1px 1px 2.5px #0000005e;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#skills .skill .progreso {
+    background: linear-gradient(#ccccef ,#0307ef);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+}
+
+#skills .skill .barra-skill span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(#06f1a7, #4b00fa);
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 1px 2px 5px #00000073;
+}
+
+#skills .skill .javascript {
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+
+@keyframes javascript {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}   
+
+#skills .skill .htmlcss {
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+
+#skills .skill .php {
+    width: 0%;
+    animation: 2s php forwards;
+}
+
+@keyframes php {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+#skills .skill .sql {
+    width: 0%;
+    animation: 2s sql forwards;
+}
+
+@keyframes sql {
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+
+#skills .skill .mysql {
+    width: 0%;
+    animation: 2s mysql forwards;
+}
+
+@keyframes mysql {
+    0%{
+        width: 0%;
+    } 
+
+    100% {
+        width: 85%;
+    }
+}
+
+#skills .skill .vs {
+    width: 0%;
+    animation: 2s vs forwards;
+}
+
+@keyframes vs {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 88%;
+    }
+}
+
+#contactanos {
+    width: 100%;
+    height: 800px; 
+    background: #050323; 
+    color: #fff;
+}
+
+#contactanos footer {
+    padding-top: 200px;
+    display: flex;
+    width: 100%;
+    height: 758px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center; 
+    justify-content: center;
+}
+
+footer .about {
+    width: 40%; 
+    height: 400px;
+    margin-right:  50px;
+}
+
+footer .social {
+    width: 20%; 
+    height: 400px;
+    display: block;
+}
+
+footer .contactame {
+    width: 20%;
+    height: 400px;
+}
+footer .about h2 {
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 40px;  
+}
+
+footer .social h2 {
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.social ul li {
+    display: flex;
+    
+}
+
+.social ul li .facebook {
+   background: #1518d6;
+   position: absolute;
+   color: white;
+   border-radius: 5%;
+   transition: all .5s;  
+}
+
+.social ul li .facebook i {
+   background: #1518d6;
+   position: relative; 
+   z-index: 10px;
+   padding: 20px 31px;
+   font-size: 22px;
+   border-radius: 5%;
+}
+
+.social .facebook span {
+    position: absolute;
+    text-decoration: none;
+    left : 9px;
+    top: 22px;
+}
+.social ul li .facebook:hover {
+    padding-left: 100px;
+}
+
+.social ul li .instagram {
+    color: #fff;
+    margin-top: 60px;
+    background: linear-gradient(45deg, #fd0707, #f10678);
+    border-radius: 5%;
+    transition: all .3s;
+    position: absolute;
+} 
+
+.social ul li .instagram i {
+    background: linear-gradient(45deg, #fd0707, #f10678);
+    position: relative;
+    font-size: 28px;
+    font-weight: 700px;
+    padding: 16px 26px;
+    border-radius: 5%;
+}
+
+.social .instagram span {
+    position: absolute;
+    text-decoration: none;
+    left: 9px;
+    top: 22px;
+    font-weight: 500px;
+}
+
+.social .instagram:hover {
+    padding-left: 100px;
+}
+.social ul li .whatsapp {
+    color: #fff;
+    margin-top: 120px;
+    border-radius: 5%;
+    background: #08d14b;
+    transition: all .3s;
+    position: absolute;
+} 
+
+.social ul li .whatsapp .ico {
+    position: relative;
+    background: #08d14b;
+    padding: 18px 24px;
+    border-radius: 5%;
+    font-size: 28px;
+    font-weight: 700px;
+}
+
+.social .whatsapp span {
+    position: absolute;
+    text-decoration: none;
+    left: 9px;
+    top: 22px;
+    font-weight: 500px;
+}
+
+.social .whatsapp:hover {
+    padding-left: 100px;
+}
+
+
+footer .contactame h2 {
+    font-size: 35px;
+    display: flex;
+    padding: 4px 10px;
+    text-transform: capitalize;
+}
+
+footer .contactame ul li {
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer .contactame ul li i {
+    padding-left: 50px;
+}
+
+#contactanos .foot {
+    width: 100%;
+    text-align: center;
+}
+
+#contactanos .foot span {
+    color: #575656;
+}
