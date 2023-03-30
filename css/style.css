@@ -124,7 +124,7 @@ header nav ul li span.active {
 
 @media screen and (max-width: 900px){
     header {
-        width: 100%;
+        max-width: 1200px;
         height: 40px;
         display: flex;
         align-items: center;
