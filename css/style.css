@@ -79,6 +79,7 @@ header nav ul li span.active {
 }
 
 .nav-bar {
+    z-index: 1000;
     display: none;
 }
 
@@ -92,10 +93,14 @@ header nav ul li span.active {
 
 #inicio .wrapper {
     max-width: 1300px;
+    padding-top: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: space-between;
+}
+
+#inicio .wrapper .contenido {
+    width: 50%;
 }
 
 #inicio .wrapper .contenido {
@@ -118,8 +123,18 @@ header nav ul li span.active {
 }
 
 @media screen and (max-width: 900px){
+    header {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .logo{
+        font-size: 10px;
+        width: 50px;
+    }
     #inicio .wrapper{
-        flex-wrap: wrap;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -139,7 +154,15 @@ header nav ul li span.active {
     #inicio .wrapper .contenido .info .redes a i {
         padding: 10px;
     }
-
+    #inicio .wrapper .avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #inicio .wrapper .avatar .img img{
+    width: 225px;
+    height: 250px;
+}
 }
 
 @keyframes aparecer {
@@ -196,15 +219,14 @@ header nav ul li span.active {
 }
 
 #inicio .wrapper .avatar {
-    max-width: 1200px;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: flex-end;
 }
-#inicio .wrapper .avatar .img {
+
+#inicio .wrapper .avatar img {
     margin-top: 50px;
-    background-image: url('../img/omarblood.png');
     background-size: cover;
     background-position: center center;
     height: 450px;
@@ -212,7 +234,6 @@ header nav ul li span.active {
     box-shadow: 0 20px 5px 5px rgba(55, 55, 55, 0.374);
     animation: animate 5s ease-in-out infinite;
     transition: all 1s ease-in-out;
-    z-index: 100; 
 }
 
 @keyframes animate {
@@ -237,20 +258,20 @@ header nav ul li span.active {
     height: 800px;
     border-radius: 50%;
     left: -12%;
-    top: 20%;
+    top: 10%;
     background: linear-gradient(45deg, #9c9b9b, #07fdab);
-    animation: object 6s linear infinite;
+    animation: object 30s linear infinite;
     z-index: -100;
  }
 
  .wrapper::after {
     content: "";
     position: absolute;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     left: 35%;
-    top: 12%;
+    top: 15%;
     background: linear-gradient(45deg, #5900ff, #c0ffe8);
     animation: object1 6s linear infinite;
     z-index: -1;
@@ -265,7 +286,7 @@ header nav ul li span.active {
  @keyframes object1 {
     50% {
         left: 45%;
-        top: 10%;
+        top: 6%;
     }
  }
 
@@ -273,7 +294,7 @@ header nav ul li span.active {
     font-family: 'Poppins';
     font-size: 68px;
     font-weight: bolder;
-    box-shadow: 0px 3px 5px #000;
+    box-shadow: 0px 5px 15px #00000036;
     margin-bottom: 25px;
  }
 
