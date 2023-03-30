@@ -5,13 +5,13 @@
     box-sizing: border-box;
     font-family: 'Poppins';
 }
-
+/*walter 7601 6858, cv 8732 3715 8742 4335*/
 html {
     scroll-behavior: smooth;
 }
 
 header.sticky {
-    padding: 5px 100px;
+    padding: 5px 10px;
     background-color: #fefdfd;
     box-shadow: -11px 11px 22px #bebebe66, 11px -11px 22px #ffffff5f;
 }
@@ -30,10 +30,6 @@ header h1 {
     font-family: 'Courgette';
     margin: 0;
     padding: 0;
-}
-
-#nav {
-    width: 65%;
 }
 
 header nav ul {
@@ -82,39 +78,137 @@ header nav ul li span.active {
     width: 100%; 
 }
 
-body, html {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .nav-bar {
     display: none;
 }
 
+/*SECCION INICIO*/
 #inicio {
     width: 100%;
-    max-width: 1500px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.wrapp {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+} 
+
+#inicio .wrapper {
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.img {
+#inicio .wrapper .contenido {
+    width: 100%;
+}
+#inicio .wrapper .contenido .info {
+    width: 700px;
+}
+
+#inicio .wrapper .contenido .info h3 {
+    font-size: 100px;
+    text-align: center;
+    color: rgb(136, 0, 255);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+}
+
+#inicio .wrapper .contenido .info span {
+    font-size: 25px;
+}
+
+@media screen and (max-width: 900px){
+    #inicio .wrapper{
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }  
+    #inicio .wrapper .contenido .info h3 {
+        font-size: 35px;
+    }
+    #inicio .wrapper .contenido .info span{
+        padding-top: 50px;
+        font-size: 18px;
+    }
+    #inicio .wrapper .contenido .info {
+        padding-top: 50%;
+        width: 100%;
+    }
+    #inicio .wrapper .contenido .info .redes a i {
+        padding: 10px;
+    }
+
+}
+
+@keyframes aparecer {
+    0% {
+        margin-left: -50px;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+#inicio .wrapper .contenido .redes {
     position: absolute;
-    left: 900px;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+} 
+
+#inicio .redes a {
+    display: flex;
+    padding: 5px;
+    color: #ffff;
+    text-decoration: none;
+}
+
+#inicio .redes a i {
+    display: flex;
+    padding: 20px;
+    background: #000;
+    transition: .3s ease-in-out;
+    border-radius: 50%; 
+}
+
+
+#inicio .redes .facebook:hover {
+    background: #052ffffe; 
+    border: 2px solid #000;
+}
+#inicio .redes .twitter:hover {
+    background: #02bafd;
+    border: 2px solid #000;
+}
+#inicio .redes .instagram:hover {
+    background: linear-gradient(#fc0101, #fe026b);
+    border: 2px solid #000;
+}
+#inicio .redes .tiktok:hover {
+    background: #fbfcfc;
+    color: #000;
+    border: 2px solid #000;
+}
+
+#inicio .wrapper .avatar {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#inicio .wrapper .avatar .img {
+    margin-top: 50px;
     background-image: url('../img/omarblood.png');
     background-size: cover;
     background-position: center center;
-    height: 525px;
-    width: 545px;
+    height: 450px;
+    width: 350px;
     box-shadow: 0 20px 5px 5px rgba(55, 55, 55, 0.374);
     animation: animate 5s ease-in-out infinite;
     transition: all 1s ease-in-out;
@@ -136,95 +230,6 @@ body, html {
 }
 
 
-
-/*SECCION INICIO*/
-#inicio {
-    position: relative;
-    width: 100%;
-    height: 800px;
-}
-
-#inicio .contenido {
-    position: absolute;
-    left: 10px;
- }
-
-#inicio .contenido .info {
-    width: 750px;
-    left: 10px;
-    padding-top: 1200px;
-    padding-right: 0px;
-    min-width: 500px;
-    justify-content: end;
-    text-align: wrap;
-    font-size: 25px;
-    transform: translateY(-60%);
-    z-index: 10;
-    animation: aparecer 2s forwards;
-}
-
-@keyframes aparecer {
-    0% {
-        margin-left: -50px;
-        opacity: 0;
-    }
-    100% {
-        margin-left: 0;
-        opacity: 1;
-    }
-}
-
-#inicio .redes {
-    display: inline-block; 
-    margin-top: 20px;
-    padding-left: 5px;
-    width: 100%;
-}
-
-#inicio .redes a {
-    width: 50px;
-    height: 50px;
-    color: #ffff;
-    text-align: center;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #090909;
-    transition: .3s ease-in-out;
-}
-
-#inicio .redes a i {
-    padding-top: 10px;
-}
-
-#inicio .redes .facebook:hover {
-    background: #052ffffe; 
-    border: 2px solid #000;
-}
-#inicio .redes .twitter:hover {
-    background: #02bafd;
-    border: 2px solid #000;
-}
-#inicio .redes .instagram:hover {
-    background: linear-gradient(#fc0101, #fe026b);
-    border: 2px solid #000;
-}
-#inicio .redes .tiktok:hover {
-    background: #fbfcfc;
-    color: #000;
-    border: 2px solid #000;
-}
-
-#inicio .wrapper {
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 80px);
-    justify-content: center;
-    align-items: 0 10%;
-    justify-content: space-between;
- }
-
  .wrapper::before {
     position: absolute;
     content: "";
@@ -235,6 +240,7 @@ body, html {
     top: 20%;
     background: linear-gradient(45deg, #9c9b9b, #07fdab);
     animation: object 6s linear infinite;
+    z-index: -100;
  }
 
  .wrapper::after {
@@ -247,6 +253,7 @@ body, html {
     top: 12%;
     background: linear-gradient(45deg, #5900ff, #c0ffe8);
     animation: object1 6s linear infinite;
+    z-index: -1;
  }
 
  @keyframes object {
@@ -440,18 +447,29 @@ body, html {
 
  /*SKILLSS*/
  #skills {
-    width: 100%;
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    position: fixed;
+ }
+ #skills .contenido {
+    padding: 150px 30px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex ;
  }
 
- #skills .contenido {
-    width: 1000px;
-    display: flex;
-    justify-content: space-between;
+ #skills .contenido .left {
+    width: 50%;
+ }
+
+ #skills .contenido .left h3 {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 800;
+    margin-bottom: 15px; 
+ } 
+
+ #skills .contenido .right {
+    width: 50%;
+    padding-left: 50px;
  }
 
  #skills h1 {
@@ -748,36 +766,50 @@ footer .contactame ul li i {
     color: #575656;
 }
 
-@media screen and (max-width: 980px){
-    #navbar {
+@media screen and (max-width: 950px){
+    header #menu {
+        width: 100%;
         display: block;
+        position: absolute;
+        height: 100vh;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s ease all;
+        background: #0307efb0;
     }
-   
-    
-
-    #nav #links {
-        display: block;
+    header nav {
+        display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-    }
-
-    header #nav {
-        display: none;
-    }
-
-    header #nav.active {
-
-        position: absolute;
-        top: 50px;
-        right: 0;
-        backdrop-filter: blur(15px);
-        width: 200px;
+        backdrop-filter: blur(12px);
+        width: 50%;
         height: 100vh;
-        display: block !important;
     }
 
-    header a#nav.active ul{
-        display: block !important;
-    }
+   header .nav-bar {
+    display: block;
+   }
+   
+   header {
+    background-color: #fff;
+   }
+   header #menu.active {
+    left: 0;
+    z-index: 200;
+   }
+   header nav ul {
+    display: block;
+    text-align: center;
+   }
+   header nav ul li {
+    text-align: center;
+    padding: 20px 0;
+   }
+   header nav ul li a {
+    color: white;
+   }
 }
+
+
+
+

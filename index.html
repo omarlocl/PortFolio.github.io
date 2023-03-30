@@ -15,62 +15,59 @@
         <div class="logo">
             <h1>BalitanChvz</h1>
         </div>
-        <div class="container_navegation">
-            <nav id="nav">
+        <div id="menu" class="">
+            <nav id="nav" class="">
                 <ul id="links">
                     <li>
-                        <a href="#inicio">Inicio</a>
-                        <span class="linea active"></span>
+                        <a href="#inicio" onclick="seleccionar(0)">Inicio</a>
+                        <span class="linea seleccionado"></span>
                     </li>
                     <li>
-                        <a href="#sobremi">About</a>
+                        <a href="#sobremi" onclick="seleccionar(1)">About</a>
                         <span class="linea "></span>
                     </li>
                     <li>
-                        <a href="#portafolio">rtafolio</a>
+                        <a href="#portafolio" onclick="seleccionar(2)">PortFolio</a>
                         <span class="linea "></span>
                     </li><li>
-                        <a href="#skills">Skills</a>
+                        <a href="#skills" onclick="seleccionar(3)">Skills</a>
                         <span class="linea "></span>
                    </li>
                     <li>
-                        <a href="#contactanos">Contact</a>
+                        <a href="#contactanos"  onclick="seleccionar(4)">Contact</a>
                         <span class="linea "></span>
                     </li>
                 </ul>
             </nav>
-        </div>
-       
-        <div class="nav-bar" id="navbar" >
-            <i class="fa-solid fa-bars" id="btnmenu"></i>
+        </div>    
+        <div class="nav-bar" id="nav-bar" >
+            <i class="fa-solid fa-bars"></i>
         </div>
     </header>
-
+<!--seccion inicio-->
     <section id="inicio">
         <div class="wrapper ">
             <div class="contenido">
                 <div class="info">
-                    <h3>Developer full stack !</h3>
+                    <h3>Developer web!</h3>
                     <span>Hi, I'm sistems engineer 
                         Front End and Back End development of applications with Typescript, Javascript, PHP, MySQL, HTML5
-                        Application testing, Troubleshooting.</span> <br>
+                        Application testing, Troubleshooting.8472 5515</span> <br>
                       
                     <div class="redes">
-                        <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" ><i class="fa-brands fa-facebook-f facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram instagram"></i></a>
+                        <a href="#" ><i class="fa-brands fa-tiktok tiktok"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="wrapp">
+            <div class="avatar">
                 <div class="img"></div>
             </div>
-        </div>
-        
-        
+        </div>   
     </section>
-
+<!--section about-->>
     <section class="container" id="sobremi">
         <div class="contenido">
             <div class="left">
@@ -206,6 +203,7 @@
             </div>
         </div>
     </section>
+
     <section id="contactanos">
         <footer>
             <div class="container about">
@@ -241,6 +239,7 @@
             header.classList.toggle("sticky", window.scrollY > 0);
         })
     </script>
+    <script src="js/script.js"></script>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
